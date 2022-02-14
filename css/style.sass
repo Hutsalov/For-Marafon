@@ -1,0 +1,386 @@
+*
+    box-sizing: border-box
+    font-family: 'Inter', sans-serif
+
+$color-button: #3730A3
+$color-link:  #6B7280
+$color-text:  #4338CA
+$color-title: #1F2937
+$background-color-footer: #FEF2F2
+$footer-support: #9CA3AF
+$item-title-color: #1F2937
+$footer__container-subtitle-color: #9CA3AF
+$footer__container-title-color: #374151
+$careers-title-color: #6B7280
+$careers-company-messa-color: #1F2937
+$careers-company-new-color: #6B7280
+$careers-company-position-color: #6B7280
+$careers-company-year-color: #6B7280
+$social-contact-title-color: #374151
+$social-contact-subtitle-color: #9CA3AF
+
+
+@mixin btn-violet
+    font-size: 18px
+    line-height: 28px
+    font-weight: 500
+    width: 131px
+    height: 52px
+    color: $color-button
+    background-color: white
+    border: 1px solid #3730A3
+    border-radius: 6px 
+    cursor: pointer
+
+@mixin btn-hover
+    &:hover        
+        background-color: #3730A3
+        color: white
+        transition: 500ms
+
+@mixin btn-heading
+    &:hover        
+        background-color: white
+        color: #3730A3
+        transition: 500ms
+@mixin link-hover
+    &:hover        
+        transition: 500ms
+        text-decoration-color: $color-button
+        text-decoration-style: solid
+        text-decoration-line: underline 
+
+// Container all clasees
+body
+    margin: 0px
+.container,
+.heading__container,
+.middle__container-hero,
+.middle__footer,
+.item-photo, 
+.item__footer,
+.section__careers,
+.social
+    padding: 0 15px
+    max-width: 1180px
+    margin: 0 auto
+
+// Logo,menu,navigation
+
+.container
+    margin-top: 87px
+.header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &__nav
+        display: flex
+        justify-content: flex-end
+        align-items: center
+    &__menu
+        margin-right: 80px
+        list-style-type: none
+        font-size: 18px
+        line-height: 28px
+        font-weight: 500
+        .heder__link
+            color: $color-link
+            text-decoration: none
+            @include link-hover
+
+.header__nav-menu
+    display: flex
+    padding: 0px
+
+.header__button-here
+    @include btn-violet
+    @include btn-hover
+
+// About Jessica
+.heading__container
+    display: flex
+    margin-top: 189px
+    justify-content: space-between
+    align-items: center
+.heading
+    flex-direction: column
+    
+    &__name
+        color: $color-text 
+        font-size: 20px
+        line-height: 28px
+        font-weight: 500
+        margin: 0px
+        padding-bottom: 40px
+        
+    &__title
+        font-size: 72px
+        line-height: 72px
+        font-weight: 700
+        color: $color-title
+        width: 596px
+        margin: 0px
+        padding-bottom: 40px
+    &__subtitle
+        color: $color-link
+        font-weight: normal
+        font-size: 18px
+        line-height: 28px
+        width: 553px
+        margin: 0px
+        padding-bottom: 40px
+    &__prefere
+        font-size: 12px
+        line-height: 16px
+        font-weight: 400
+        color: $color-link
+        margin: 0px
+        
+    &__button
+        display: flex
+        padding-bottom: 40px
+.btn-more
+    width: 157px
+    margin-left: 20px
+
+.btn-heading
+    background-color: #3730A3
+    color: white
+    @include btn-heading
+
+
+// The person's works
+.middle
+    display: flex
+    justify-content: space-between
+    &__title
+        margin: 0 auto
+        margin-top: 198px
+        margin-bottom: 150px        
+        font-size: 48px
+        line-height: 48px
+        font-weight: 600
+        text-align: center   
+        width: 1039px
+    &__title-color
+        color: $color-button
+    &__services-collum-one
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        margin-left: 8px
+        
+    &__services-collum-two
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        padding-left: 9px
+    &__services-name
+        flex-direction: column
+    &__services-title
+        width: 311px
+        height: 48px
+        margin-bottom: 20px
+        font-size: 12px
+        line-height: 16px
+        color: $color-link
+    &__services-work
+        color: $color-title
+        font-size: 18px
+        line-height: 26px
+        font-weight: 600
+    &__services-link
+        text-decoration: none
+        color: $color-button
+        font-size: 12px
+        line-height: 16px
+        @include link-hover
+
+
+.middle__footer-bg
+    margin-top: 150px
+    background-color: $background-color-footer
+.middle__footer
+        &-container
+            height: 299px
+            
+        &-support
+            color: $footer-support
+            font-weight: 400
+            font-size: 20px
+            line-height: 28px
+            padding-top: 128px
+            
+        &-commercial
+            display: flex
+            justify-content: space-between
+            padding-top: 28px
+            justify-items: flex-end
+            align-items: center
+
+// central block  where is photo
+
+.item
+    &__title
+        font-weight: 600
+        font-size: 48px
+        line-height: 48px
+        color: $item-title-color
+        text-align: center
+        margin-top: 155px
+        font-style: normal
+        margin-bottom: 102px
+        
+        margin-top: 155px
+    &__photo-row-one
+        display: flex
+        justify-content: space-between
+
+.item__photo-one
+    margin-right: 30px
+// .item__photo-two
+//     margin-right: 28px
+    
+.width
+    margin-top: 30px
+.big-pic
+    margin-right: 0px
+
+// bottom block where is photo
+.item__footer-container
+    margin-top: 123px
+    display: flex
+    justify-content: space-between
+.footer__container
+    flex-direction: column
+    text-align: center
+    width: 341px
+    
+.footer__container-title
+    margin-top: 41px
+    font-weight: 600
+    font-size: 30px
+    line-height: 36px
+    color: $footer__container-title-color 
+.footer__container-subtitle
+    font-weight: normal
+    font-size: 18px
+    line-height: 28px
+    text-align: center
+    color:  $footer__container-subtitle-color
+    margin-top: 20px
+
+// Careers 
+.careers__title
+    margin-top: 141px
+    margin-bottom: 102px
+    text-align: center
+    font-weight: 600
+    font-size: 48px
+    line-height: 48px
+    color: $item-title-color
+
+.careers__container-item
+    justify-content: space-between
+    display: flex
+
+.careers__company
+    flex-direction: column
+    >p
+        margin: 0px
+        margin-bottom: 80px
+        font-weight: 600
+        font-size: 16px
+        line-height: 24px
+    &-title
+        margin-bottom: 80px
+        text-transform: uppercase
+        color: $careers-title-color
+        font-weight: 500
+        font-size: 16px
+        line-height: 24px
+    &-massa
+        color: $careers-company-messa-color
+        font-weight: 600
+        font-size: 16px
+        line-height: 24px
+    &-new
+        font-weight: 600
+        font-size: 16px
+        line-height: 24px
+        color: $careers-company-new-color
+
+.careers__pisition
+    flex-direction: column
+    >p
+        margin: 0px
+        margin-bottom: 80px
+        color: $careers-company-position-color
+        font-weight: normal
+        font-size: 16px
+        line-height: 24px
+    &-title
+        margin-bottom: 80px
+        text-transform: uppercase
+        color: $careers-title-color
+        font-weight: 500
+        font-size: 16px
+        line-height: 24px
+
+.careers__years
+    flex-direction: column
+    >p
+        margin: 0px
+        margin-bottom: 80px
+        color: $careers-company-year-color
+        font-weight: normal
+        font-size: 16px
+        line-height: 24px
+    &-title
+        margin: 0px
+        margin-bottom: 80px
+        text-transform: uppercase
+        color: $careers-title-color
+        font-weight: 500
+        font-size: 16px
+        line-height: 24px
+
+// Contact with me 
+.social__bg
+    margin-top: 70px
+    background-color: $background-color-footer
+    height: 480px    
+.social
+    &__container
+        padding: 0 15px
+        max-width: 1180px
+        margin: 0 auto
+        height: 800px
+    &__container-item
+        padding-top: 110px
+        text-align: center
+    &__contact-title
+        margin: 0px
+        margin-bottom: 20px
+        font-weight: 500
+        font-size: 48px
+        line-height: 48px
+        color: $social-contact-title-color
+    &__contact-subtitle
+        margin: 0px
+        font-size: 18px
+        line-height: 28px
+        color: $social-contact-subtitle-color
+    &__networks
+        text-align: center
+        margin-top: 105px
+        display: flex
+        justify-content: center
+        padding-left: 75px
+        &-width
+            margin-right: 55px
+.social__networks-link
+
+        
+
+
